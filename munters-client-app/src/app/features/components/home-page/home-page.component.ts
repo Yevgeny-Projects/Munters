@@ -76,6 +76,9 @@ export class HomePageComponent implements OnInit {
   }
 
   getPhotosSearchBy(searchBy: string) {
+
+    if (searchBy === '') return;
+
     this.headerName = 'Result of the search';
     if (this.gridApi)  this.gridApi.showLoadingOverlay();
 
